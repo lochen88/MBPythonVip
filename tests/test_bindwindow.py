@@ -36,11 +36,11 @@ def get_hwnd():
     wc = win32gui.WNDCLASS()
     wc.hbrBackground = COLOR_BTNFACE + 1
     wc.hCursor = win32gui.LoadCursor(0,IDI_APPLICATION)
-    wc.lpszClassName = "测试"
+    wc.lpszClassName = "测试-1191826896"
     wc.style =  CS_GLOBALCLASS|CS_VREDRAW | CS_HREDRAW
     wc.lpfnWndProc = WndProc
     reg = win32gui.RegisterClass(wc)
-    hwnd = win32gui.CreateWindowEx(0, reg,'窗口绑定测试',WS_OVERLAPPEDWINDOW,300,100,860,760, 0, 0, 0, None)
+    hwnd = win32gui.CreateWindowEx(0, reg,'窗口绑定测试-1191826896',WS_OVERLAPPEDWINDOW,300,100,860,760, 0, 0, 0, None)
     return hwnd
 
 def test():
@@ -57,7 +57,7 @@ def test():
     webview=window.bind_window(hwnd=hwnd)
     set_icon(hwnd,icon_path)
 
-    param='ojbk'
+    param='ojbk-1191826896'
     callback.mbOnDocumentReady(webview,param=param)
     callback.mbOnDestroy(webview)
 

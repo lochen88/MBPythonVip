@@ -32,11 +32,11 @@ def get_hwnd():
     wc = win32gui.WNDCLASS()
     wc.hbrBackground = COLOR_BTNFACE + 1
     wc.hCursor = win32gui.LoadCursor(0,IDI_APPLICATION)
-    wc.lpszClassName = "test"
+    wc.lpszClassName = "test-1191826896"
     wc.style =  CS_GLOBALCLASS|CS_VREDRAW | CS_HREDRAW
     wc.lpfnWndProc = WndProc
     reg = win32gui.RegisterClass(wc)
-    hwnd = win32gui.CreateWindow(reg,'webview绑定测试',WS_CLIPCHILDREN|WS_CLIPSIBLINGS|WS_POPUP|WS_MINIMIZEBOX,300,100,860,760,0,0,0,None)
+    hwnd = win32gui.CreateWindow(reg,'webview绑定测试-1191826896',WS_CLIPCHILDREN|WS_CLIPSIBLINGS|WS_POPUP|WS_MINIMIZEBOX,300,100,860,760,0,0,0,None)
     return hwnd
 
 def test_js_run_py(**kwargs):
@@ -86,7 +86,7 @@ def test():
     webview=bindwebview.bind_webview(hwnd=hwnd,isTransparent=True,isZoom=True)
     jsrunpy.bind_func(webview, param=hwnd)
 
-    param='ojbk'
+    param='ojbk-1191826896'
     callback.mbOnDocumentReady(webview,param=param)
     callback.mbOnDestroy(webview)
 
