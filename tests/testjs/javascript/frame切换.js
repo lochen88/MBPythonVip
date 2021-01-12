@@ -1,0 +1,3 @@
+// 例子网易云音乐  <iframe name=contentFrame......
+return window.parent.frames["contentFrame"].document.getElementsByClassName("m-cvrlst f-cb")[0].innerHTML
+// return document.getElementById("testiframe").contentWindow.document.body.innerHTML
